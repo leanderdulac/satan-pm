@@ -1,0 +1,31 @@
+{
+  "name": "satan-pm",
+  "version": "1.0.0",
+  "description": "Satan Process Manager",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "bin": {
+    "satan": "bin/satan.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pagarme/satan-pm.git"
+  },
+  "keywords": [
+    "process",
+    "manager"
+  ],
+  "author": "Jonathan Lima <jonathan@pagar.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pagarme/satan-pm/issues"
+  },
+  "homepage": "https://github.com/pagarme/satan-pm",
+  "dependencies": {
+    "commander": "^2.6.0",
+    "lodash": "^3.3.1",
+    "log4js": "^0.6.22"
+  }
+}
