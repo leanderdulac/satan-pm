@@ -16,12 +16,6 @@ program.option('-c, --config [path]', 'config file path');
 program.option('-p, --pid-file [path]', 'pid file path');
 program.parse(process.argv);
 
-var config = {};
-
-if (program.config) {
-	config = JSON.parse(fs.readFileSync(program.config));
-}
-
 new Satan({
 	script: program.script,
 	arguments: program.args,
