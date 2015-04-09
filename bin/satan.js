@@ -13,6 +13,7 @@ program.option('-i, --instances [count]', 'number of workers to spawn');
 program.option('-n, --node-arguments [args]', 'custom arguments to nodejs');
 program.option('-p, --scheduling-policy', 'cluster scheduling policy(none or rr)');
 program.option('-c, --config [path]', 'config file path');
+program.option('-p, --pid-file [path]', 'pid file path');
 program.parse(process.argv);
 
 var config = {};
@@ -27,6 +28,7 @@ new Satan({
 	nodeArguments: program.nodeArguments,
 	workingDirectory: program.workingDirectory,
 	instances: program.instances,
-	schedulingPolicy: program.schedulingPolicy
+	schedulingPolicy: program.schedulingPolicy,
+	pidFile: program.pidFile
 }, program.config).start();
 
