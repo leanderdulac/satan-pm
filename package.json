@@ -1,6 +1,6 @@
 {
   "name": "satan-pm",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Satan Process Manager",
   "main": "lib/index.js",
   "scripts": {
