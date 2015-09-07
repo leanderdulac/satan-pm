@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# script/test: Run test suite for application. Optionallly pass in a path to an
+#              individual test file to run a single test.
+
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+[ -z "$DEBUG" ] || set -x
+
+echo "===> Running tests..."
+
+mocha -R spec -t 10000 --require test/common.js $@
+

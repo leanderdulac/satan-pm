@@ -4,7 +4,7 @@
   "description": "Satan Process Manager",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "script/test"
   },
   "bin": {
     "satan": "bin/satan.js"
@@ -31,5 +31,11 @@
     "setflags": "0.0.2",
     "v8-natives": "0.0.2",
     "v8flags": "^2.0.10"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "chai-as-promised": "^5.1.0",
+    "chai-things": "^0.2.0",
+    "mocha": "^2.3.0"
   }
 }
