@@ -12,5 +12,11 @@ cd "$(dirname "$0")/.."
 
 echo "===> Running tests..."
 
-mocha -R spec -t 10000 --require test/common.js $@
+node node_modules/.bin/istanbul cover _mocha -- -R spec -t 10000 --require test/common.js $@
+
+if [ ! -z "$EXPORT_COVERAGE" ]; then
+	cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+
+	rm -rf ./coverage
+fi
 
