@@ -27,9 +27,9 @@ When satan-pm process receives a `SIGHUP` signal, it will gracefully reload all 
 
 To do so, it will trigger a disconnect on the worker with `cluster.worker.disconnect()`.
 
-You can hook up the shutdown process to do a custom cleanup procedure(e.g.: you have a worker consuming a Redis queue). For this you need to add a listener to the `shutdown` event on the global variable `process`.
+You can hook up the shutdown process to do a custom cleanup procedure(e.g.: you have a worker consuming a Redis queue). For this you need to add a listener to the `shutdown` event on the `process` global.
 
-Please note that when you listen to the `shutdown` event, you are responsible for terminating the process(i.e.: call `cluster.worker.disconnect()`).
+Please note that when you listen to the `shutdown` event you are responsible for terminating the process(i.e.: calling `cluster.worker.disconnect()`).
 
 # Graceful Shutdown
 
