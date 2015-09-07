@@ -24,8 +24,12 @@
   },
   "homepage": "https://github.com/pagarme/satan-pm",
   "dependencies": {
+    "bluebird": "^2.9.34",
     "commander": "^2.6.0",
     "lodash": "^3.3.1",
-    "log4js": "^0.6.22"
+    "log4js": "^0.6.22",
+    "setflags": "0.0.2",
+    "v8-natives": "0.0.2",
+    "v8flags": "^2.0.10"
   }
 }
